@@ -10,3 +10,8 @@ services:
     ports:
       - "3306:5432"
     restart: always
+    read_only: true
+    tmpfs:
+      - /tmp
+      - /run
+      - /var/run
