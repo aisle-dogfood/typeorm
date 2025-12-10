@@ -10,3 +10,13 @@ services:
     ports:
       - "3306:5432"
     restart: always
+    read_only: true
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    tmpfs:
+      - /tmp
+      - /run
+      - /var/run/postgresql
+
+volumes:
+  postgres_data:
