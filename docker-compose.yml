@@ -10,3 +10,5 @@ services:
     ports:
       - "3306:5432"
     restart: always
+    security_opt:
+      - no-new-privileges:true
